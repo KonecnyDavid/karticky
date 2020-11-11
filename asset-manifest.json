@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/karticky/static/css/main.29484ade.chunk.css",
+    "main.js": "/karticky/static/js/main.31eb206c.chunk.js",
+    "main.js.map": "/karticky/static/js/main.31eb206c.chunk.js.map",
+    "runtime-main.js": "/karticky/static/js/runtime-main.decf913f.js",
+    "runtime-main.js.map": "/karticky/static/js/runtime-main.decf913f.js.map",
+    "static/js/2.ca41c58e.chunk.js": "/karticky/static/js/2.ca41c58e.chunk.js",
+    "static/js/2.ca41c58e.chunk.js.map": "/karticky/static/js/2.ca41c58e.chunk.js.map",
+    "static/js/3.c72ae46c.chunk.js": "/karticky/static/js/3.c72ae46c.chunk.js",
+    "static/js/3.c72ae46c.chunk.js.map": "/karticky/static/js/3.c72ae46c.chunk.js.map",
+    "index.html": "/karticky/index.html",
+    "static/css/main.29484ade.chunk.css.map": "/karticky/static/css/main.29484ade.chunk.css.map",
+    "static/js/2.ca41c58e.chunk.js.LICENSE.txt": "/karticky/static/js/2.ca41c58e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.decf913f.js",
+    "static/js/2.ca41c58e.chunk.js",
+    "static/css/main.29484ade.chunk.css",
+    "static/js/main.31eb206c.chunk.js"
+  ]
+}
