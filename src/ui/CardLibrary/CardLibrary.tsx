@@ -12,7 +12,7 @@ const dataset = loadDataset();
 const createCard = () => {
     return {
         text: dataset.getQuestion(),
-        bonus: Math.random() > 0.8 ? dataset.getQuestion() : null
+        bonus: Math.random() > 0.2 ? dataset.getBonus() : null
     }
 }
 
@@ -26,6 +26,8 @@ export const CardLibrary = ({datasetName} : Props) => {
     const onClick = () => {
         setCard(createCard())
     }
+
+    console.log(card)
 
     return (
         <div className="card-library">

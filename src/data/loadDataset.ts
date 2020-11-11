@@ -12,7 +12,7 @@ export const loadDataset = () => {
             return karticky.questions[getRandomInt(0, karticky.questions.length)]
         },
         getBonus: () => {
-            return karticky.bonuses[getRandomInt(0, karticky.questions.bonuses)]
+            return karticky.bonuses[getRandomInt(0, karticky.bonuses.length)]
         }
     }
 }
