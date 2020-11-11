@@ -28,8 +28,9 @@ export const CardLibrary = ({datasetName} : Props) => {
     }
 
     return (
-        <div>
+        <div className="card-library">
             <Card {...card} onClick={onClick}/>
+            <div className="card-libray-help bounce-7">Klikni na kartu👆</div>
         </div>
     )
 }
