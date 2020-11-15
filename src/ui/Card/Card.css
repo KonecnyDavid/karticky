@@ -18,18 +18,18 @@
 }
 
 .card[data-wobble='1'] {
-    animation: wobble 1s 1;
+    animation: wobble .5s 1;
   }
   
   @keyframes wobble {
     25% {
-      transform: rotate(7.5deg);
+      transform: rotate(3deg);
     }
     50% {
-      transform: rotate(-15deg);
+      transform: rotate(-7deg);
     }
     75% {
-      transform: rotate(2.5deg);
+      transform: rotate(1deg);
     }
     100% {
       transform: rotate(0deg);
@@ -39,25 +39,4 @@
     -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.45); 
     box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.45);
     transform: scale(1.01 , 1.01);
-}
-
-.card .card-bonus {
-    width: 100%;
-    background-color: black;
-    color: white;
-    border-radius: 5.5mm;
-}
-
-.card .card-text {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    line-height: 1.65rem;
-    font-weight: 600;
-    text-align: center;
-}
-
-.card .card-bonus .card-bonus-text {
-    text-align: center;
-    margin: .5rem .75rem;
-    font-size: .5rem;
 }
