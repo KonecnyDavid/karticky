@@ -13,7 +13,7 @@ export const BonusCard = ({ card, onClick} : IProps) => {
     const { text } = card;
 
     return (
-        <Card onClick={onClick}>
+        <Card onClick={onClick} className="card-dark">
             <>
                 <div>
                     <div className="card-header">

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./Card.css";
 
-interface Props {
+interface IProps {
     onClick: any;
-    children: JSX.Element
+    children: JSX.Element;
+    className?: string
 }
 
-export const Card = ({ onClick, children }: Props) => {
+export const Card = ({ onClick, children, className }: IProps) => {
     const [wobble, setWobble] = useState(0);
 
     const onClickHandler = (e: any) => {
@@ -16,7 +17,7 @@ export const Card = ({ onClick, children }: Props) => {
 
     return (
         <div
-            className="card"
+            className={"card " + className}
             onClick={onClickHandler}
             onAnimationEnd={() => setWobble(0)}
             data-wobble={wobble}

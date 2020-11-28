@@ -1,5 +1,10 @@
-.card-containder {
+.card-container {
     display: flex;
     justify-content: center;
     margin-top: 8rem;
+}
+
+.menu-item {
+    padding-left: .5rem;
+    padding-right: .5rem;
 }

@@ -3,3 +3,15 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.modal-close {
+    position: absolute;
+    top: .4rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+}

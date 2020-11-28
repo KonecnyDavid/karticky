@@ -3,12 +3,17 @@ import { getRandomInt } from "../random/random";
 import { CardType } from "./CardType";
 import { ICard } from "./ICard";
 
+const capitalize = (s : string) => {
+    if (s === "") return ""
+    return s.charAt(0).toUpperCase() + s.slice(1)
+  }
+
 export const generateCard = (dataset: IDataset) : ICard => {
     const getQuestion = () => {
-        return dataset.questions[getRandomInt(0, dataset.questions.length)]
+        return capitalize(dataset.questions[getRandomInt(0, dataset.questions.length)])
     }
     const getBonus=  () => {
-        return dataset.bonuses[getRandomInt(0, dataset.bonuses.length)]
+        return capitalize(dataset.bonuses[getRandomInt(0, dataset.bonuses.length)])
     }
     const propability = Math.random()
 
