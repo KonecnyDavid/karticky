@@ -21,11 +21,11 @@ export const CardLibrary = ({ datasetName, settings, history, onCardAdded }: Pro
     
     
     const generateCardWrapper = () => {
-        let card = generateCard();
+        let card = generateCard(settings);
         
         // Exclude already displayed card if setting
         while (!settings.allowRepetition && history.includes(card)) {
-            card = generateCard();
+            card = generateCard(settings);
         }
 
         onCardAdded(card)
