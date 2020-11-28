@@ -5,6 +5,13 @@ import { defaultSettings, Settings } from "./ui/Settings/Settings";
 import { Menu } from "./ui/Menu/Menu";
 import { History } from "./ui/History/History";
 import { ICard } from "./data/card/ICard";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+import { Rules } from "./ui/Rules/Rules";
 
 function App() {
     const [isHistoryOpen, setIsHistoryOpen] = useState(false);
@@ -18,8 +25,10 @@ function App() {
 
     return (
         <div className="app" id="app">
+            <Router>
             <Menu>
                 <div>
+                    <Link to="/pravidla" className="menu-item"><i className="fas fa-info"></i> Pravidla</Link>
                     <span
                         onClick={() => setIsHistoryOpen(true)}
                         className="menu-item cursor-pointer"
@@ -35,11 +44,18 @@ function App() {
                 </div>
             </Menu>
             <div className="card-container">
-                <CardLibrary
+            <Switch>
+          <Route path="/pravidla">
+            <Rules />
+          </Route>
+          <Route path="/">
+          <CardLibrary
                     settings={settings}
                     onCardAdded={addToHistory}
                     history={history}
                 />
+          </Route>
+        </Switch>
             </div>
             <Settings
                 isOpen={isSettingsOpen}
@@ -51,6 +67,7 @@ function App() {
                 onClose={() => setIsHistoryOpen(false)}
                 history={history}
             />
+            </Router>
         </div>
     );
 }

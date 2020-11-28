@@ -1,6 +1,9 @@
 import React from "react";
 import { Logo } from "../Logo/Logo";
 import "./Menu.css"
+import {
+    Link
+  } from "react-router-dom";
 
 interface Props {
     children: any
@@ -9,7 +12,7 @@ interface Props {
 export const Menu = ({children} : Props) => {
     return (
         <nav className="menu">
-            <Logo />
+            <Link to="/"><Logo /></Link>
             {children}
         </nav>
     )
