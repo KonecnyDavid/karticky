@@ -25,10 +25,10 @@ function App() {
 
     return (
         <div className="app" id="app">
-            <Router>
+            <Router basename="/">
             <Menu>
                 <div>
-                    <Link to="/pravidla" className="menu-item"><i className="fas fa-info"></i> Pravidla</Link>
+                    <Link to="/karticky/pravidla" className="menu-item"><i className="fas fa-info"></i> Pravidla</Link>
                     <span
                         onClick={() => setIsHistoryOpen(true)}
                         className="menu-item cursor-pointer"
@@ -45,10 +45,10 @@ function App() {
             </Menu>
             <div className="card-container">
             <Switch>
-          <Route path="/pravidla">
+          <Route path="/karticky/pravidla">
             <Rules />
           </Route>
-          <Route path="/">
+          <Route path="/karticky/">
           <CardLibrary
                     settings={settings}
                     onCardAdded={addToHistory}
