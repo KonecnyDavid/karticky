@@ -12,7 +12,7 @@ interface Props {
 export const Menu = ({children} : Props) => {
     return (
         <nav className="menu">
-            <Link to="/karticky/"><Logo /></Link>
+            <Link to="/"><Logo /></Link>
             {children}
         </nav>
     )
