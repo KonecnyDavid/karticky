@@ -1,3 +1,3 @@
 [
-    {"name": "Kartičky", "id": "karticky", "file": "karticky.tsv"}
+    {"name": "Kartičky", "id": "karticky", "file": "karticky.tsv", "bonuses": 25, "questions": 200, "smallBonusChance": 0.2 }
 ]
