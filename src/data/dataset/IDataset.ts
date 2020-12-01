@@ -1,6 +1,7 @@
+import { ICardWithoutID } from "../card/ICard";
+
 export interface IDataset {
     name: string
     id: string,
-    questions: string[]
-    bonuses: string[]
+    cards: ICardWithoutID[]
 }

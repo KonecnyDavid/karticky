@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Rules.css"
 
 export const Rules = () => {
     return (
-        <div style={{ paddingLeft: "8rem", paddingRight: "8rem" }}>
+        <div className="rules">
             <h2>Pravidla hry</h2>
             <p>
                 Hra je pro dva a více hráčů a princip hry je jednoduchý -
@@ -18,6 +20,8 @@ export const Rules = () => {
                 Také je možné v nastavení zapnout generování minibonusů přímo na
                 karty s otázkou nebo povolit opakování karet.
             </p>
+
+            <Link to="/"><strong>🍻 Zpět do hry</strong></Link>
         </div>
     );
 };

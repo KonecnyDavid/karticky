@@ -11,35 +11,38 @@ interface Props {
     datasetName?: string;
     settings: ISettings;
     history: ICard[];
-    onCardAdded: (card : ICard) => void
+    onCardAdded: (card: ICard) => void;
 }
 
 const generateCard = createCardGenerator("karticky");
 
-export const CardLibrary = ({ datasetName, settings, history, onCardAdded }: Props) => {
+export const CardLibrary = ({
+    datasetName,
+    settings,
+    history,
+    onCardAdded,
+}: Props) => {
     const [card, setCard]: any = useState(null);
-    
-    
+
     const generateCardWrapper = () => {
         let card = generateCard(settings);
-        
+
         // Exclude already displayed card if setting
         while (!settings.allowRepetition && history.includes(card)) {
             card = generateCard(settings);
         }
 
-        onCardAdded(card)
+        onCardAdded(card);
         setCard(card);
-    }
+    };
 
     useEffect(() => {
-        generateCardWrapper()
+        generateCardWrapper();
     }, []);
 
     const onClick = () => {
-        generateCardWrapper()
+        generateCardWrapper();
     };
-
     const cardElem =
         card && card.type === CardType.Basic ? (
             <BasicCard onClick={onClick} card={card} />
@@ -51,6 +54,7 @@ export const CardLibrary = ({ datasetName, settings, history, onCardAdded }: Pro
         <div className="card-library">
             {card && cardElem}
             <div className="card-libray-help bounce-7">Klikni na kartu👆</div>
+            
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./Game.css";
 import { CardLibrary } from "./ui/CardLibrary/CardLibrary";
 import { defaultSettings, Settings } from "./ui/Settings/Settings";
 import { Menu } from "./ui/Menu/Menu";
@@ -11,9 +11,9 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import { Rules } from "./ui/Rules/Rules";
+import { Rules } from "./ui/Pages/Rules/Rules";
 
-function App() {
+export const Game = () => {
     const [isHistoryOpen, setIsHistoryOpen] = useState(false);
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const [settings, setSettings] = useState(defaultSettings);
@@ -71,5 +71,3 @@ function App() {
         </div>
     );
 }
-
-export default App;

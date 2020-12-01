@@ -1,0 +1,10 @@
+.rules {
+    padding: 0rem 10rem;
+    transition: all 1s ease-in-out;
+}
+
+@media only screen and (max-width: 700px) {
+    .rules {
+        padding: 0rem 5rem;
+    }
+}

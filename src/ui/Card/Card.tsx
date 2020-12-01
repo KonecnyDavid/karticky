@@ -21,6 +21,7 @@ export const Card = ({ onClick, children, className }: IProps) => {
             onClick={onClickHandler}
             onAnimationEnd={() => setWobble(0)}
             data-wobble={wobble}
+            id="card"
         >
             {children}
         </div>

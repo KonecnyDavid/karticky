@@ -32,7 +32,7 @@ export const Settings = ({ isOpen, onSave, onClose }: IProps) => {
 
     useEffect(() => {
         onSave(settings)
-    }, [settings]);
+    }, [settings, onSave]);
 
     return (
         <Modal
