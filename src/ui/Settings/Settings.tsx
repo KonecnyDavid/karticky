@@ -60,7 +60,8 @@ export const Settings = ({ isOpen, onSave, onClose }: IProps) => {
                 checked={settings.allowMiniBonuses}
             />
 
-            <Link to="/vsechny_karty">Zobrazit celou sadu karet</Link>
+            <div><Link to="/vsechny_karty">Zobrazit celou sadu karet</Link></div>
+            
 
             </div>
 
