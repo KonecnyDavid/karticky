@@ -16,7 +16,7 @@ import { CardDetail } from "./ui/Pages/CardDetail/CardDetail";
 import { CardList } from "./ui/Pages/CardList/CardList";
 import Modal from "react-modal"
 
-Modal.setAppElement("#app")
+Modal.setAppElement("#root")
 
 export const Game = () => {
     const [isHistoryOpen, setIsHistoryOpen] = useState(false);
