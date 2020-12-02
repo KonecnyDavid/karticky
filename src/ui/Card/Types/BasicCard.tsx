@@ -6,7 +6,7 @@ import "./BasicCard.css";
 
 interface IProps {
     card: ICard;
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 export const BasicCard = ({ card, onClick }: IProps) => {

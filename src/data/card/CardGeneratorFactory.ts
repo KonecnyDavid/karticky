@@ -1,9 +1,8 @@
 import { ISettings } from "../../ui/Settings/Settings";
-import { IDataset } from "../dataset/IDataset";
 import { generateCard } from "./CardGenerator";
+import { createCardProvider } from "./CardProviderFactory";
 
 export const createCardGenerator = (datasetName: string) => {
-    const dataset : IDataset = require(`./../datasets/${datasetName}.json`)
-
-    return (settings : ISettings) => generateCard(dataset, settings);
+    const cardProvider = createCardProvider(datasetName)
+    return (settings : ISettings) => generateCard(cardProvider, settings);
 }

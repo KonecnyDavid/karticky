@@ -14,6 +14,16 @@ interface Props {
     onCardAdded: (card: ICard) => void;
 }
 
+export const cardResolver = (card: ICard, onClick: () => void) => (
+    <>
+    {card && card.type === CardType.Basic ? (
+        <BasicCard onClick={onClick} card={card} />
+    ) : (
+        <BonusCard onClick={onClick} card={card} />
+    )}
+    </>
+)
+
 const generateCard = createCardGenerator("karticky");
 
 export const CardLibrary = ({
@@ -43,17 +53,13 @@ export const CardLibrary = ({
     const onClick = () => {
         generateCardWrapper();
     };
-    const cardElem =
-        card && card.type === CardType.Basic ? (
-            <BasicCard onClick={onClick} card={card} />
-        ) : (
-            <BonusCard onClick={onClick} card={card} />
-        );
+    const cardElem = cardResolver(card, onClick)
+        
 
     return (
         <div className="card-library">
             {card && cardElem}
-            <div className="card-libray-help bounce-7">Klikni na kartu👆</div>
+            <div className="card-library-help bounce-7">Klikni na kartu👆</div>
             
         </div>
     );

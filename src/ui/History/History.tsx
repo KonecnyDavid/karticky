@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import { ICard } from "../../data/card/ICard";
-import { HistoryItem } from "./HistoryItem/HistoryItem";
+import { CardCompact } from "../CardCompact/CardCompact";
 
 interface IProps {
     isOpen: boolean;
@@ -18,7 +18,7 @@ export const History = ({ isOpen, history, onClose }: IProps) => {
         >
             <h2>Historie</h2>
             {history.map((card, idx) => (
-                <HistoryItem card={card} number={idx + 1} key={idx} />
+                <CardCompact card={card} number={idx + 1} key={idx} />
             ))}
             <div className="modal-close" onClick={onClose}><i className="fas fa-times"></i></div>
         </Modal>

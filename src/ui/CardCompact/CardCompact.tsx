@@ -1,13 +1,13 @@
 import React from "react";
-import { CardType } from "../../../data/card/CardType";
-import { ICard } from "../../../data/card/ICard";
+import { CardType } from "../../data/card/CardType";
+import { ICard } from "../../data/card/ICard";
 
 interface IProps {
     card: ICard;
-    number: number;
+    number?: number;
 }
 
-export const HistoryItem = ({ card, number }: IProps) => {
+export const CardCompact = ({ card, number }: IProps) => {
     return (
         <div>
             <div>
@@ -19,7 +19,7 @@ export const HistoryItem = ({ card, number }: IProps) => {
                         marginRight: "1rem",
                     }}
                 >
-                    {number}.
+                    {number ? number : card.id}.
                 </span>
                 <strong>
                     {card.type === CardType.Bonus && (

@@ -19,7 +19,7 @@
 }
 
 .card[data-wobble='1'] {
-    animation: wobble .5s 1;
+    animation: wobble .2s 1;
   }
   
   @keyframes wobble {

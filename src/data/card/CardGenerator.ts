@@ -1,6 +1,6 @@
 import { ISettings } from "../../ui/Settings/Settings";
-import { IDataset } from "../dataset/IDataset";
 import { getRandomInt } from "../random/random";
+import { ICardProvider } from "./CardProvider";
 import { ICard } from "./ICard";
 
 const capitalize = (s : string) => {
@@ -9,9 +9,9 @@ const capitalize = (s : string) => {
   }
 
 
-export const generateCard = (dataset: IDataset, settings: ISettings) : ICard => {
-    const id = getRandomInt(0, dataset.cards.length - 1);
-    const card = dataset.cards[id]
+export const generateCard = (cardProvider: ICardProvider, settings: ISettings) : ICard => {
+    const id = getRandomInt(0, cardProvider.length - 1);
+    const card = cardProvider.getCard(id)
 
     if (!settings.allowMiniBonuses)
         return {...card, text: capitalize(card.text), bonus: undefined, id: id};

@@ -12,6 +12,8 @@ import {
     Link
   } from "react-router-dom";
 import { Rules } from "./ui/Pages/Rules/Rules";
+import { CardDetail } from "./ui/Pages/CardDetail/CardDetail";
+import { CardList } from "./ui/Pages/CardList/CardList";
 
 export const Game = () => {
     const [isHistoryOpen, setIsHistoryOpen] = useState(false);
@@ -48,7 +50,13 @@ export const Game = () => {
           <Route path="/pravidla">
             <Rules />
           </Route>
-          <Route path="/">
+          <Route path="/vsechny_karty">
+            <CardList />
+          </Route>
+          <Route path="/karta/:id">
+            <CardDetail />
+          </Route>
+          <Route exact path="/">
           <CardLibrary
                     settings={settings}
                     onCardAdded={addToHistory}
