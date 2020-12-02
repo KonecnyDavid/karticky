@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
 import Modal from "react-modal";
+import { Link } from "react-router-dom";
 import "./Settings.css"
 
 export interface ISettings {
@@ -58,7 +59,11 @@ export const Settings = ({ isOpen, onSave, onClose }: IProps) => {
                 onChange={handleChange}
                 checked={settings.allowMiniBonuses}
             />
+
+            <Link to="/vsechny_karty">Zobrazit celou sadu karet</Link>
+
             </div>
+
             <div className="modal-close" onClick={onClose}><i className="fas fa-times"></i></div>
         </Modal>
     );
