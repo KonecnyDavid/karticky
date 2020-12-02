@@ -32,7 +32,7 @@ export const CardLibrary = ({
     history,
     onCardAdded,
 }: Props) => {
-    const [card, setCard]: any = useState(null);
+    const [card, setCard] = useState<ICard>();
 
     const generateCardWrapper = () => {
         let card = generateCard(settings);
@@ -52,13 +52,11 @@ export const CardLibrary = ({
 
     const onClick = () => {
         generateCardWrapper();
-    };
-    const cardElem = cardResolver(card, onClick)
-        
+    }
 
     return (
         <div className="card-library">
-            {card && cardElem}
+            {card && cardResolver(card, onClick)}
             <div className="card-library-help bounce-7">Klikni na kartu👆</div>
             
         </div>
