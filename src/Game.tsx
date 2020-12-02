@@ -29,19 +29,19 @@ export const Game = () => {
         <div className="app" id="app">
             <Router basename="/karticky">
             <Menu>
-                <div>
-                    <Link to="/pravidla" className="menu-item"><i className="fas fa-info"></i> Pravidla</Link>
+                <div style={{display: "flex", alignItems: "center"}}>
+                    <Link to="/pravidla" className="menu-item"><i className="fas fa-info"></i> <span className="hide-on-sm">Pravidla</span></Link>
                     <span
                         onClick={() => setIsHistoryOpen(true)}
                         className="menu-item cursor-pointer"
                     >
-                        <i className="fas fa-history"></i> Historie
+                        <i className="fas fa-history"></i> <span className="hide-on-sm">Historie</span>
                     </span>
                     <span
                         onClick={() => setIsSettingsOpen(true)}
                         className="menu-item cursor-pointer"
                     >
-                        <i className="fas fa-cog"></i> Nastavení
+                        <i className="fas fa-cog"></i> <span className="hide-on-md">Nastavení</span>
                     </span>
                 </div>
             </Menu>
