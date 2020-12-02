@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/karticky/static/css/main.23e31041.chunk.css",
-    "main.js": "/karticky/static/js/main.de6e1467.chunk.js",
-    "main.js.map": "/karticky/static/js/main.de6e1467.chunk.js.map",
+    "main.css": "/karticky/static/css/main.74fdefbb.chunk.css",
+    "main.js": "/karticky/static/js/main.cc937a30.chunk.js",
+    "main.js.map": "/karticky/static/js/main.cc937a30.chunk.js.map",
     "runtime-main.js": "/karticky/static/js/runtime-main.16e88878.js",
     "runtime-main.js.map": "/karticky/static/js/runtime-main.16e88878.js.map",
     "static/js/2.8151b3bd.chunk.js": "/karticky/static/js/2.8151b3bd.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.be9ef61b.chunk.js": "/karticky/static/js/3.be9ef61b.chunk.js",
     "static/js/3.be9ef61b.chunk.js.map": "/karticky/static/js/3.be9ef61b.chunk.js.map",
     "index.html": "/karticky/index.html",
-    "static/css/main.23e31041.chunk.css.map": "/karticky/static/css/main.23e31041.chunk.css.map",
+    "static/css/main.74fdefbb.chunk.css.map": "/karticky/static/css/main.74fdefbb.chunk.css.map",
     "static/js/2.8151b3bd.chunk.js.LICENSE.txt": "/karticky/static/js/2.8151b3bd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.16e88878.js",
     "static/js/2.8151b3bd.chunk.js",
-    "static/css/main.23e31041.chunk.css",
-    "static/js/main.de6e1467.chunk.js"
+    "static/css/main.74fdefbb.chunk.css",
+    "static/js/main.cc937a30.chunk.js"
   ]
 }
