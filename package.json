@@ -1,7 +1,7 @@
 {
   "name": "karticky",
   "version": "0.1.0",
-  "homepage": "https://davidkonecny.eu/karticky",
+  "homepage": "http://drunk-cards.cz",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",

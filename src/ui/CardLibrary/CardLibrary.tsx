@@ -4,6 +4,7 @@ import { CardType } from "../../data/card/CardType";
 import { ICard } from "../../data/card/ICard";
 import { BasicCard } from "../Card/Types/BasicCard";
 import { BonusCard } from "../Card/Types/BonusCard";
+import { Debug } from "../Debug/Debug";
 import { ISettings } from "../Settings/Settings";
 import "./CardLibrary.css";
 
@@ -58,7 +59,9 @@ export const CardLibrary = ({
         <div className="card-library">
             {card && cardResolver(card, onClick)}
             <div className="card-library-help bounce-7">Klikni na kartu👆</div>
-            
+            {settings.debug &&
+                <Debug settings={settings} card={card}/>
+            }
         </div>
     );
 };
